@@ -1,7 +1,12 @@
-def find_string(str, word):
-    return(word in str)
+def product_of_list(test_list):
+    if len(test_list) == 0:
+        return 0
+    if len(test_list) ==1:
+        return test_list[0]
+    else: 
+        return test_list[len(test_list)-1]*product_of_list(test_list[:len(test_list)-1])
 
-sample_str = "Hello world"
-chosen_str = "Bye"
 
-print(find_string(sample_str, chosen_str))
+sample_list = [4, 3, 5]
+
+print(product_of_list(sample_list))

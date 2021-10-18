@@ -1,10 +1,10 @@
-def capitalize_strings(test_list):
-    if len(test_list) == 0:
-        return ""
-    else:       
-        return (f"{test_list[0].upper()} {capitalize_strings(test_list[1:])}")
+def reverse_string(test_string):
+    if len(test_string) == 0 or len(test_string) == 1:
+        return test_string
+    else:
+        return test_string[len(test_string) -1] + reverse_string(test_string[:len(test_string)-1])
 
 
-# sample_list = []
-sample_list = ['pandas', 'monkeys', 'koalas', 'kangaroos']
-print(capitalize_strings(sample_list))
+test_string="hello"
+
+print(reverse_string(test_string))
